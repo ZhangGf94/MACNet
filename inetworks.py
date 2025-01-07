@@ -83,7 +83,7 @@ class SequenceWindows(nn.Module):
                 new_samples[start_index:end_index, :, :, :] = temp_x
                 new_labels[start_index:end_index] = labels[i]
         elif self.shuffle == 2:  # Disrupting the order of batch samples
-            for i in range(num_samples):  # 遍历样本数
+            for i in range(num_samples):  
                 for j in range(num_new_samples):
                     start_point = j*self.window_stride
                     end_point = j*self.window_stride+self.window_size
@@ -92,7 +92,7 @@ class SequenceWindows(nn.Module):
                     new_labels[i*num_new_samples+j] = labels[i]
             np.random.seed(10000)
             new_nums = new_samples.shape[0]  
-            permutation = list(np.random.permutation(new_nums))  # 打乱顺序
+            permutation = list(np.random.permutation(new_nums))  
             new_samples = new_samples[permutation]
             new_labels = new_labels[permutation]
             # Get the original order of the permutation, and sort the array back to the original order.
