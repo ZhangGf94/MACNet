@@ -9,9 +9,9 @@ Pytorch1.9.1+cu102
 python 3.8.13
 
 # Note
-Submited: 31 May, 2024
-Resubmited: 11 Nov, 2024
-Accpeted: 19 Dec, 2024
+Submited: 31 May, 2024;
+Resubmited: 11 Nov, 2024;
+Accpeted: 19 Dec, 2024;
 
 # Cite
 Please cite our paper if you use our code in your work:
